@@ -42,9 +42,6 @@ export default class SectionListModule extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            dataArray: data,
-        }
     }
 
     filterData(){
