@@ -42,7 +42,13 @@ export default class SectionListModule extends Component {
 
     constructor(props) {
         super(props);
-        var data=[
+        this.state = {
+            dataArray: data,
+        }
+    }
+
+    filterData(){
+        let data=[
             {data: [],key: 'A'},
             {data: [],key: 'B'},
             {data: [],key: 'C'},
@@ -71,13 +77,6 @@ export default class SectionListModule extends Component {
             {data: [],key: 'Z'},
             {data: [],key: this.props.otherAlphabet},
         ]
-        this.state = {
-            dataArray: data,
-        }
-    }
-
-    filterData(){
-        let data=this.state.dataArray
         this.props.sectionListData.map((item,index)=>{
             for (let i=0;i<data.length;i++){
                 if (i==data.length-1){
